@@ -1,7 +1,7 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, type ReactNode } from "react";
 
 type CursorProps = {
-  displayText: string;
+  displayText: string | ReactNode | null;
 };
 
 const Cursor = ({ displayText }: CursorProps) => {
@@ -69,7 +69,7 @@ const Cursor = ({ displayText }: CursorProps) => {
       ref={cursorRef}
       className={`fixed bg-white transition-transform duration-300 pointer-events-none ${
         displayText
-          ? "rounded-md"
+          ? "rounded-md w-1/2"
           : "w-16 h-16 rounded-full mix-blend-difference"
       }`}
     >
