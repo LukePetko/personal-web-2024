@@ -69,7 +69,7 @@ const Cursor = ({ displayText }: CursorProps) => {
       ref={cursorRef}
       className={`fixed bg-white transition-transform duration-300 pointer-events-none ${
         displayText
-          ? "rounded-md w-1/2"
+          ? "rounded-md max-w-[50%]"
           : "w-16 h-16 rounded-full mix-blend-difference"
       }`}
     >

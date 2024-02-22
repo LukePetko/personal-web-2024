@@ -1,9 +1,13 @@
 import React, { useEffect, useRef, useState, type ReactNode } from "react";
 import useFontResize from "./hooks/useFontResize";
 import Cursor from "./Cursor";
+import Link from "./Link";
 
 const TextContainer = () => {
   const outerDiv = useRef<HTMLDivElement>(null);
+  const github = useRef<HTMLImageElement>(null);
+  const twitter = useRef<HTMLImageElement>(null);
+  const linkedin = useRef<HTMLImageElement>(null);
   const [displayText, setDisplayText] = useState<string | ReactNode | null>(
     null,
   );
@@ -39,6 +43,18 @@ const TextContainer = () => {
       );
     });
 
+    github.current?.addEventListener("mouseover", () => {
+      setDisplayText("Check out my GitHub!");
+    });
+
+    twitter.current?.addEventListener("mouseover", () => {
+      setDisplayText("Follow me on 𝕏!");
+    });
+
+    linkedin.current?.addEventListener("mouseover", () => {
+      setDisplayText("Connect with me on LinkedIn!");
+    });
+
     outerDiv.current?.addEventListener("mouseout", () => {
       setDisplayText(null);
     });
@@ -49,16 +65,25 @@ const TextContainer = () => {
       <Cursor displayText={displayText} />
       <div
         ref={outerDiv}
-        className="leading-tight h-screen transition-all duration-700 ease-in-out font-display uppercase flex flex-wrap content-start items-center gap-x-10"
+        className="leading-tight h-screen transition-all duration-700 ease-in-out font-display uppercase flex flex-wrap content-start items-center gap-x-10 font-thin"
       >
         <h1 className="text-[1.3em] font-bold leading-none block">
           Lukáš Peťko
         </h1>
         <h2 className="text-[1.3em] font-thin">Frontend Developer</h2>
-        <a className="text-[1.3em] first-letter:font-bold">About me</a>
-        <a className="text-[1.3em] first-letter:font-bold">Projects</a>
-        <a className="text-[1.3em] first-letter:font-bold">Blog</a>
-        <a className="text-[1.3em] first-letter:font-bold">Contact</a>
+        <Link>About me</Link>
+        <Link>Projects</Link>
+        <Link>Blog</Link>
+        <Link>Contact</Link>
+        <a href="https://github.com/LukePetko" ref={github}>
+          <img src="/github.svg" className="h-[0.8em]" />
+        </a>
+        <a href="https://twitter.com/LUkEPetko" ref={twitter}>
+          <img src="/x.svg" className="h-[0.8em]" />
+        </a>
+        <a href="https://linkedin.com/in/lukas-petko" ref={linkedin}>
+          <img src="/linkedin.svg" className="h-[0.8em]" />
+        </a>
       </div>
     </>
   );
