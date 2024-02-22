@@ -2,9 +2,10 @@ import React, { useEffect, useRef, type ReactNode } from "react";
 
 type CursorProps = {
   displayText: string | ReactNode | null;
+  isMaxWidth: boolean;
 };
 
-const Cursor = ({ displayText }: CursorProps) => {
+const Cursor = ({ displayText, isMaxWidth }: CursorProps) => {
   const cursorRef = useRef<HTMLDivElement>(null);
   const positionRef = useRef({
     mouseX: 0,
@@ -69,7 +70,7 @@ const Cursor = ({ displayText }: CursorProps) => {
       ref={cursorRef}
       className={`fixed bg-white transition-transform duration-300 pointer-events-none ${
         displayText
-          ? "rounded-md max-w-[50%]"
+          ? `rounded-md ${isMaxWidth ? "w-1/2" : "max-w-[50%]"}`
           : "w-16 h-16 rounded-full mix-blend-difference"
       }`}
     >

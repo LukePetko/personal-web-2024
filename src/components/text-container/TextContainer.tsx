@@ -11,6 +11,7 @@ const TextContainer = () => {
   const [displayText, setDisplayText] = useState<string | ReactNode | null>(
     null,
   );
+  const [isMaxWidth, setIsMaxWidth] = useState(false);
   useFontResize(outerDiv);
 
   useEffect(() => {
@@ -25,6 +26,7 @@ const TextContainer = () => {
           create things! Hope you enjoy my portfolio! 😊
         </>,
       );
+      setIsMaxWidth(true);
     });
 
     outerDiv.current?.children[1].addEventListener("mouseover", () => {
@@ -41,18 +43,22 @@ const TextContainer = () => {
           Akular as a frontend developer. And I use Vim, btw (had to mention)
         </>,
       );
+      setIsMaxWidth(true);
     });
 
     github.current?.addEventListener("mouseover", () => {
       setDisplayText("Check out my GitHub!");
+      setIsMaxWidth(false);
     });
 
     twitter.current?.addEventListener("mouseover", () => {
       setDisplayText("Follow me on 𝕏!");
+      setIsMaxWidth(false);
     });
 
     linkedin.current?.addEventListener("mouseover", () => {
       setDisplayText("Connect with me on LinkedIn!");
+      setIsMaxWidth(false);
     });
 
     outerDiv.current?.addEventListener("mouseout", () => {
@@ -62,7 +68,7 @@ const TextContainer = () => {
 
   return (
     <>
-      <Cursor displayText={displayText} />
+      <Cursor displayText={displayText} isMaxWidth={isMaxWidth} />
       <div
         ref={outerDiv}
         className="leading-tight h-screen transition-all duration-700 ease-in-out font-display uppercase flex flex-wrap content-start items-center gap-x-10 font-thin"
