@@ -5,9 +5,9 @@ import Link from "./Link";
 
 const TextContainer = () => {
   const outerDiv = useRef<HTMLDivElement>(null);
-  const github = useRef<HTMLImageElement>(null);
-  const twitter = useRef<HTMLImageElement>(null);
-  const linkedin = useRef<HTMLImageElement>(null);
+  const github = useRef<HTMLAnchorElement>(null);
+  const twitter = useRef<HTMLAnchorElement>(null);
+  const linkedin = useRef<HTMLAnchorElement>(null);
   const [displayText, setDisplayText] = useState<string | ReactNode | null>(
     null,
   );
