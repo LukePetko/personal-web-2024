@@ -99,9 +99,9 @@ const TextContainer = () => {
       />
       <div
         ref={outerDiv}
-        className="leading-tight h-screen transition-all duration-700 ease-in-out font-display uppercase flex flex-wrap content-start items-center gap-x-10 font-thin"
+        className="flex h-screen flex-wrap content-start items-center gap-x-10 font-display font-thin uppercase leading-tight transition-all duration-700 ease-in-out"
       >
-        <h1 className="font-bold leading-none block">Lukáš Peťko</h1>
+        <h1 className="block font-bold leading-none">Lukáš Peťko</h1>
         <h2 className="font-thin">Frontend Developer</h2>
         <Link>About me</Link>
         <Link>Projects</Link>

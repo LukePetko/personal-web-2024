@@ -22,6 +22,7 @@ export default {
     },
     fontFamily: {
       display: ["Space Grotesk", "sans-serif"],
+      serif: ["Montserrat", "sans-serif"],
     },
   },
   plugins: [],
