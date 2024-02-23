@@ -38,7 +38,7 @@ const TextContainer = () => {
       setDisplayText(
         <>
           I've been learing web development since I was 10 years old and I've
-          been working as a professional developer since 2018. I've worked in
+          been working as a professional developer since 20.6. I've worked in
           multiple companies in both startup and corporate environments. I've
           always been passionate about web development and I always wanted to
           learn as much as I can to keep up with the latest trends. 😊
@@ -101,22 +101,20 @@ const TextContainer = () => {
         ref={outerDiv}
         className="leading-tight h-screen transition-all duration-700 ease-in-out font-display uppercase flex flex-wrap content-start items-center gap-x-10 font-thin"
       >
-        <h1 className="text-[1.3em] font-bold leading-none block">
-          Lukáš Peťko
-        </h1>
-        <h2 className="text-[1.3em] font-thin">Frontend Developer</h2>
+        <h1 className="font-bold leading-none block">Lukáš Peťko</h1>
+        <h2 className="font-thin">Frontend Developer</h2>
         <Link>About me</Link>
         <Link>Projects</Link>
         <Link>Blog</Link>
         <Link>Contact</Link>
         <a href="https://github.com/LukePetko" ref={github}>
-          <img src="/github.svg" className="h-[0.8em]" />
+          <img src="/github.svg" className="h-[0.6em]" />
         </a>
         <a href="https://twitter.com/LUkEPetko" ref={twitter}>
-          <img src="/x.svg" className="h-[0.8em]" />
+          <img src="/x.svg" className="h-[0.6em]" />
         </a>
         <a href="https://linkedin.com/in/lukas-petko" ref={linkedin}>
-          <img src="/linkedin.svg" className="h-[0.8em]" />
+          <img src="/linkedin.svg" className="h-[0.6em]" />
         </a>
       </div>
     </>
