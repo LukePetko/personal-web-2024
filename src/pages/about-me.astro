@@ -1,0 +1,45 @@
+---
+import PageLayout from "../layouts/PageLayout.astro";
+import { Image } from "astro:assets";
+import profile from "../assets/profile.jpg";
+---
+
+<PageLayout title="About Me">
+  <h1 class="font-display text-7xl font-bold">About Me</h1>
+  <div class="flex gap-10">
+    <div class="flex w-2/3 flex-col gap-8">
+      <div class="flex flex-col gap-4">
+        <p>Hi! I'm Luke. Nice to meet you! 👋</p>
+
+        <p>
+          I'm a frontend developer based in Bratislava, Slovakia. I'm 23 years
+          old. I've always loved new technologies and discovering new ways to
+          create things! Hope you enjoy my portfolio! 😊
+        </p>
+      </div>
+
+      <div class="flex flex-col gap-4">
+        <h3 class="font-display text-4xl font-bold">What do I do?</h2>
+        <p>
+          I've been learing web development since I was 10 years old and I've
+          been working as a professional developer since 2019. I've worked in
+          multiple companies in both startup and corporate environments. I've
+          always been passionate about web development and I always wanted to
+          learn as much as I can to keep up with the latest trends. 😊
+        </p>
+        <p>
+          I'm currently working as a frontend developer at a startup called
+          Akular as a frontend developer. And I use Vim, btw (had to mention)
+        </p>
+      </div>
+    </div>
+    <div class="w-1/3">
+      <Image
+        class="shadow-[10px_10px_0px_0px] shadow-white transition-shadow duration-300 hover:shadow-[20px_20px_0px_0px]"
+        src={profile}
+        alt="Profile"
+        loading="eager"
+      />
+    </div>
+  </div>
+</PageLayout>

@@ -38,7 +38,7 @@ const TextContainer = () => {
       setDisplayText(
         <>
           I've been learing web development since I was 10 years old and I've
-          been working as a professional developer since 20.6. I've worked in
+          been working as a professional developer since 2019. I've worked in
           multiple companies in both startup and corporate environments. I've
           always been passionate about web development and I always wanted to
           learn as much as I can to keep up with the latest trends. 😊
@@ -103,7 +103,7 @@ const TextContainer = () => {
       >
         <h1 className="block font-bold leading-none">Lukáš Peťko</h1>
         <h2 className="font-thin">Frontend Developer</h2>
-        <Link>About me</Link>
+        <Link href="/about-me">About me</Link>
         <Link>Projects</Link>
         <Link>Blog</Link>
         <Link>Contact</Link>

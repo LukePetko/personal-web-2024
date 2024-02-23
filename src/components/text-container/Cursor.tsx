@@ -86,13 +86,13 @@ const Cursor = ({ displayText, isMaxWidth, isHoveringButton }: CursorProps) => {
   return (
     <div
       ref={cursorRef}
-      className={`hide-on-mobile fixed bg-white pointer-events-none ${
+      className={`hide-on-mobile pointer-events-none fixed bg-white ${
         displayText
           ? `rounded-md ${isMaxWidth ? "w-1/2" : "max-w-[50%]"}`
-          : `transition-width-height-transform duration-100 rounded-full mix-blend-difference ${isHoveringButton ? "w-20 h-20" : "w-12 h-12"}`
+          : `rounded-full mix-blend-difference transition-width-height-transform duration-100 ${isHoveringButton ? "h-20 w-20" : "h-12 w-12"}`
       }`}
     >
-      <p className="text-2xl text-black py-2 px-4 font-display">
+      <p className="px-4 py-2 font-display text-2xl text-black">
         {displayText}
       </p>
     </div>
