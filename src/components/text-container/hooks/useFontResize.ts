@@ -5,7 +5,7 @@ const useFontResize = (divRef: React.RefObject<HTMLDivElement>) => {
     const resize = () => {
       if (divRef.current) {
         const updateFontSize = () => {
-          const newFontSize = (divRef.current?.clientHeight ?? 0) / 8 + "px";
+          const newFontSize = (divRef.current?.clientHeight ?? 0) / 9 + "px";
           divRef.current?.style.setProperty("font-size", newFontSize);
         };
         requestAnimationFrame(updateFontSize);

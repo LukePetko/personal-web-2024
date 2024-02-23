@@ -12,9 +12,14 @@ const TextContainer = () => {
     null,
   );
   const [isMaxWidth, setIsMaxWidth] = useState(false);
+  const [isHoveringButton, setIsHoveringButton] = useState(false);
   useFontResize(outerDiv);
 
   useEffect(() => {
+    const setIsHoveringButtonEvent = () => {
+      setIsHoveringButton(true);
+    };
+
     outerDiv.current?.children[0].addEventListener("mouseover", () => {
       setDisplayText(
         <>
@@ -46,6 +51,23 @@ const TextContainer = () => {
       setIsMaxWidth(true);
     });
 
+    outerDiv.current?.children[2].addEventListener(
+      "mouseover",
+      setIsHoveringButtonEvent,
+    );
+    outerDiv.current?.children[3].addEventListener(
+      "mouseover",
+      setIsHoveringButtonEvent,
+    );
+    outerDiv.current?.children[4].addEventListener(
+      "mouseover",
+      setIsHoveringButtonEvent,
+    );
+    outerDiv.current?.children[5].addEventListener(
+      "mouseover",
+      setIsHoveringButtonEvent,
+    );
+
     github.current?.addEventListener("mouseover", () => {
       setDisplayText("Check out my GitHub!");
       setIsMaxWidth(false);
@@ -63,12 +85,18 @@ const TextContainer = () => {
 
     outerDiv.current?.addEventListener("mouseout", () => {
       setDisplayText(null);
+      setIsMaxWidth(false);
+      setIsHoveringButton(false);
     });
   }, []);
 
   return (
     <>
-      <Cursor displayText={displayText} isMaxWidth={isMaxWidth} />
+      <Cursor
+        displayText={displayText}
+        isMaxWidth={isMaxWidth}
+        isHoveringButton={isHoveringButton}
+      />
       <div
         ref={outerDiv}
         className="leading-tight h-screen transition-all duration-700 ease-in-out font-display uppercase flex flex-wrap content-start items-center gap-x-10 font-thin"

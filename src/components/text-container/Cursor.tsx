@@ -3,9 +3,10 @@ import React, { useEffect, useRef, type ReactNode } from "react";
 type CursorProps = {
   displayText: string | ReactNode | null;
   isMaxWidth: boolean;
+  isHoveringButton: boolean;
 };
 
-const Cursor = ({ displayText, isMaxWidth }: CursorProps) => {
+const Cursor = ({ displayText, isMaxWidth, isHoveringButton }: CursorProps) => {
   const cursorRef = useRef<HTMLDivElement>(null);
   const positionRef = useRef({
     mouseX: 0,
@@ -16,6 +17,7 @@ const Cursor = ({ displayText, isMaxWidth }: CursorProps) => {
     distanceY: 0,
     key: -1,
     hasDisplayText: false,
+    isHoveringButton: false,
   });
 
   useEffect(() => {
@@ -26,12 +28,28 @@ const Cursor = ({ displayText, isMaxWidth }: CursorProps) => {
     }
   }, [displayText]);
 
+  useEffect(() => {
+    if (isHoveringButton) {
+      positionRef.current.isHoveringButton = true;
+    } else {
+      positionRef.current.isHoveringButton = false;
+    }
+  }, [isHoveringButton]);
+
   const updatePosition = (e: MouseEvent) => {
     if (!cursorRef.current) return;
     const { clientX, clientY } = e;
 
-    const offsetX = positionRef.current.hasDisplayText ? -8 : 32;
-    const offsetY = positionRef.current.hasDisplayText ? -8 : 32;
+    const offsetX = positionRef.current.hasDisplayText
+      ? -8
+      : positionRef.current.isHoveringButton
+        ? 40
+        : 24;
+    const offsetY = positionRef.current.hasDisplayText
+      ? -8
+      : positionRef.current.isHoveringButton
+        ? 40
+        : 24;
 
     positionRef.current.mouseX = clientX - offsetX;
     positionRef.current.mouseY = clientY - offsetY;
@@ -51,8 +69,8 @@ const Cursor = ({ displayText, isMaxWidth }: CursorProps) => {
         positionRef.current.mouseX - positionRef.current.destinationX;
       positionRef.current.distanceY =
         positionRef.current.mouseY - positionRef.current.destinationY;
-      positionRef.current.destinationX += positionRef.current.distanceX / 12;
-      positionRef.current.destinationY += positionRef.current.distanceY / 12;
+      positionRef.current.destinationX += positionRef.current.distanceX / 10;
+      positionRef.current.destinationY += positionRef.current.distanceY / 10;
 
       if (cursorRef.current) {
         cursorRef.current.style.left = positionRef.current.destinationX + "px";
@@ -68,10 +86,10 @@ const Cursor = ({ displayText, isMaxWidth }: CursorProps) => {
   return (
     <div
       ref={cursorRef}
-      className={`fixed bg-white transition-transform duration-300 pointer-events-none ${
+      className={`fixed bg-white transition-width-height-transform duration-100 pointer-events-none ${
         displayText
           ? `rounded-md ${isMaxWidth ? "w-1/2" : "max-w-[50%]"}`
-          : "w-16 h-16 rounded-full mix-blend-difference"
+          : `rounded-full mix-blend-difference ${isHoveringButton ? "w-20 h-20" : "w-12 h-12"}`
       }`}
     >
       <p className="text-2xl text-black py-2 px-4 font-display">

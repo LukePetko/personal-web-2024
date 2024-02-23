@@ -16,6 +16,9 @@ export default {
       animation: {
         gradient: "animatedgradient 6s ease infinite alternate",
       },
+      transitionProperty: {
+        "width-height-transform": "width, height, transform",
+      },
     },
     fontFamily: {
       display: ["Space Grotesk", "sans-serif"],
