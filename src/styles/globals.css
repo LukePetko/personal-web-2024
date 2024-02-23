@@ -1,0 +1,5 @@
+@media (hover: none) {
+    .hide-on-mobile {
+        display: none;
+    }
+}
