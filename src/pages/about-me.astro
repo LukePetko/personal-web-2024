@@ -2,10 +2,16 @@
 import PageLayout from "../layouts/PageLayout.astro";
 import { Image } from "astro:assets";
 import profile from "../assets/profile.jpg";
+import Experience from "../components/experience/Experience";
 ---
 
 <PageLayout title="About Me">
-  <h1 class="font-display text-7xl font-bold">About Me</h1>
+  <div>
+    <p class="text-lg">
+      <a href="/" class="text-zinc-400">← Back Home</a>
+    </p>
+    <h1 class="font-display text-7xl font-bold">About Me</h1>
+  </div>
   <div class="flex gap-10">
     <div class="flex w-2/3 flex-col gap-8">
       <div class="flex flex-col gap-4">
@@ -19,7 +25,7 @@ import profile from "../assets/profile.jpg";
       </div>
 
       <div class="flex flex-col gap-4">
-        <h3 class="font-display text-4xl font-bold">What do I do?</h2>
+        <h3 class="font-display text-4xl font-bold">What do I do?</h3>
         <p>
           I've been learing web development since I was 10 years old and I've
           been working as a professional developer since 2019. I've worked in
@@ -42,4 +48,6 @@ import profile from "../assets/profile.jpg";
       />
     </div>
   </div>
+  <h2 class="font-display text-6xl font-bold">Experience</h2>
+  <Experience />
 </PageLayout>
