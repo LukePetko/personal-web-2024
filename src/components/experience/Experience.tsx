@@ -10,9 +10,13 @@ const Experience = () => {
         <p className="text-xl">
           In my most recent role, which I began while still pursuing my
           university studies—a commitment I maintain to this day—I specialize in
-          developing an application centered around the visualization of digital
+          developing an application focused on the visualization of digital
           twins in construction. My work primarily involves utilizing React,
-          TypeScript, and Material-UI (MUI) along with GraphQL.
+          TypeScript, Material-UI (MUI), and GraphQL, with integration into AWS
+          for cloud services and Hasura for efficient data management. This role
+          allows me to contribute significantly to the innovative field of
+          construction visualization, leveraging advanced technologies to
+          enhance user experience and data interaction.
         </p>
       </div>
       <div className="flex flex-col gap-2">
