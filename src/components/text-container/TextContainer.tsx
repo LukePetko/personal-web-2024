@@ -104,8 +104,8 @@ const TextContainer = () => {
         <h1 className="block font-bold leading-none">Lukáš Peťko</h1>
         <h2 className="font-thin">Frontend Developer</h2>
         <Link href="/about-me">About me</Link>
-        <Link>Projects</Link>
-        <Link>Blog</Link>
+        <Link href="/projects">Projects</Link>
+        <Link href="/blog">Blog</Link>
         <Link href="mailto:luke.petko@gmail.com">Email me</Link>
         <a href="https://github.com/LukePetko" ref={github}>
           <img src="/github.svg" className="h-[0.6em]" />
