@@ -106,7 +106,7 @@ const TextContainer = () => {
         <Link href="/about-me">About me</Link>
         <Link>Projects</Link>
         <Link>Blog</Link>
-        <Link>Contact</Link>
+        <Link href="mailto:luke.petko@gmail.com">Email me</Link>
         <a href="https://github.com/LukePetko" ref={github}>
           <img src="/github.svg" className="h-[0.6em]" />
         </a>
