@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState, type ReactNode } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 import useFontResize from "./hooks/useFontResize";
 import Cursor from "./Cursor";
 import Link from "./Link";
