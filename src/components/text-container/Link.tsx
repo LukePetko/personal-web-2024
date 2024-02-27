@@ -2,7 +2,7 @@ import { type ReactNode } from "react";
 
 type LinkProps = {
   children: ReactNode;
-  href?: string;
+  href: string;
 };
 
 const Link = ({ children, href }: LinkProps) => {
