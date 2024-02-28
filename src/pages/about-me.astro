@@ -5,8 +5,8 @@ import profile from "../assets/profile.jpg";
 ---
 
 <PageLayout title="About Me">
-  <div class="flex gap-10">
-    <div class="flex w-2/3 flex-col gap-8">
+  <div class="flex flex-col gap-10 md:flex-row">
+    <div class="flex flex-col gap-8 md:w-2/3">
       <div class="flex flex-col gap-4">
         <p>Hi! I'm Luke. Nice to meet you! 👋</p>
 
@@ -34,7 +34,7 @@ import profile from "../assets/profile.jpg";
       <p class="font-semibold">Feel free to reach out to me on social media!</p>
       <div class="flex gap-8">
         <a href="https://github.com/LukePetko">
-          <img src="/github.svg" class="h-16" />
+          <img src="/github.svg" class="h-16 w-16" />
         </a>
         <a href="https://twitter.com/LUkEPetko">
           <img src="/x.svg" class="h-16" />
@@ -44,7 +44,7 @@ import profile from "../assets/profile.jpg";
         </a>
       </div>
     </div>
-    <div class="w-1/3">
+    <div class="md:w-1/3">
       <Image
         class="shadow-[10px_10px_0px_0px] shadow-white transition-shadow duration-300 hover:shadow-[20px_20px_0px_0px]"
         src={profile}
@@ -54,9 +54,11 @@ import profile from "../assets/profile.jpg";
     </div>
   </div>
 
-  <h2 class="font-display text-6xl font-bold">Experience</h2>
+  <h2 class="mt-10 font-display text-6xl font-bold md:mt-0">Experience</h2>
   <div class="flex flex-col gap-12 pb-12">
-    <div class="ml-12 flex flex-col gap-2 border-l-2 border-dashed pl-12">
+    <div
+      class="ml-3 flex flex-col gap-2 border-l-2 border-dashed pl-3 md:ml-12 md:pl-12"
+    >
       <h2 class="text-3xl font-bold">AKULAR</h2>
       <p class="text-lg font-semibold">Frontend developer</p>
       <p class="text-base">Jun 2022 - Present</p>
@@ -72,7 +74,9 @@ import profile from "../assets/profile.jpg";
         experience and data interaction.
       </p>
     </div>
-    <div class="mr-12 flex flex-col gap-2 border-r-2 border-dashed pr-12">
+    <div
+      class="mr-3 flex flex-col gap-2 border-r-2 border-dashed pr-3 md:mr-12 md:pr-12"
+    >
       <h2 class="text-3xl font-bold">
         Faculty of Informatics and Information Technologies<br />Slovak
         University of Technology
@@ -87,7 +91,9 @@ import profile from "../assets/profile.jpg";
         understanding of JavaScript fundamentals within an academic setting.
       </p>
     </div>
-    <div class="ml-12 flex flex-col gap-2 border-l-2 border-dashed pl-12">
+    <div
+      class="ml-3 flex flex-col gap-2 border-l-2 border-dashed pl-3 md:ml-12 md:pl-12"
+    >
       <h2 class="text-3xl font-bold">PosAm</h2>
       <p class="text-lg font-semibold">Junior Deleloper</p>
       <p class="text-base">Feb 2021 - Jun 2022</p>
@@ -100,7 +106,9 @@ import profile from "../assets/profile.jpg";
         in both front-end development and quality assurance.
       </p>
     </div>
-    <div class="mr-12 flex flex-col gap-2 border-r-2 border-dashed pr-12">
+    <div
+      class="mr-3 flex flex-col gap-2 border-r-2 border-dashed pr-3 md:mr-12 md:pr-12"
+    >
       <h2 class="text-3xl font-bold">Asseco Central Europe</h2>
       <p class="text-lg font-semibold">Junior Delevoper</p>
       <p class="text-base">Jun 2019 - Aug 2019</p>
@@ -115,7 +123,9 @@ import profile from "../assets/profile.jpg";
   </div>
   <h2 class="font-display text-6xl font-bold">Education</h2>
   <div class="flex flex-col gap-12 pb-12">
-    <div class="ml-12 flex flex-col gap-2 border-l-2 border-dashed pl-12">
+    <div
+      class="ml-3 flex flex-col gap-2 border-l-2 border-dashed pl-3 md:ml-12 md:pl-12"
+    >
       <h2 class="text-3xl font-bold">
         Faculty of Informatics and Information Technologies<br />Slovak
         University of Technology
