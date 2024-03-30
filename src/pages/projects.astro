@@ -3,8 +3,34 @@ import PageLayout from "../layouts/PageLayout.astro";
 ---
 
 <PageLayout title="Projects">
-  <p class="text-2xl">
-    This page will serve as a list of projects I have worked on (Once I finish
-    any worth putting here).
-  </p>
+  <div
+    class="mr-3 flex flex-col gap-2 border-r-2 border-dashed pr-3 md:mr-12 md:pr-12"
+  >
+    <h2 class="text-3xl font-bold">Tomato Tracker</h2>
+    <p class="text-md font-semibold">Pomodoro tracker</p>
+    <p class="text-lg">
+      Simple Pomodoro tracker built with React and Tailwind CSS using Wails
+      framework with backend Go.
+    </p>
+    <p class="text-lg font-semibold">Repository:</p>
+    <div class="flex items-center gap-2">
+      <!-- <Github class="h-4 w-4" /> -->
+      <img src="/github.svg" class="h-4 w-4" />
+      <a
+        class="rounded-md p-1 transition-colors duration-300 hover:bg-gray-900"
+        href="https://github.com/LukePetko"
+        target="_blank"
+      >
+        LukePetko
+      </a>
+      <span class="text-slate-400">/</span>
+      <a
+        href="https://github.com/LukePetko/pomodoro-tracker"
+        target="_blank"
+        class="rounded-md p-1 font-bold transition-colors duration-300 hover:bg-slate-900"
+      >
+        pomodoro-tracker
+      </a>
+    </div>
+  </div>
 </PageLayout>
