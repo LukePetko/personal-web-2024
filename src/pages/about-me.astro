@@ -2,6 +2,8 @@
 import PageLayout from "../layouts/PageLayout.astro";
 import { Image } from "astro:assets";
 import profile from "../assets/profile.jpg";
+
+const age = Math.floor((new Date() - new Date("2000-03-25")) / 31556926000);
 ---
 
 <PageLayout title="About Me">
@@ -11,9 +13,9 @@ import profile from "../assets/profile.jpg";
         <p>Hi! I'm Luke. Nice to meet you! 👋</p>
 
         <p>
-          I'm a frontend developer based in Bratislava, Slovakia. I'm 23 years
-          old. I've always loved new technologies and discovering new ways to
-          create things! Hope you enjoy my portfolio! 😊
+          I'm a frontend developer based in Bratislava, Slovakia. I'm {age} years
+          old. I've always loved new technologies and discovering new ways to create
+          things! Hope you enjoy my portfolio! 😊
         </p>
       </div>
 

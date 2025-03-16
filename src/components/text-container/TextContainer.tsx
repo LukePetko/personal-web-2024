@@ -14,6 +14,7 @@ const TextContainer = () => {
   const [isMaxWidth, setIsMaxWidth] = useState(false);
   const [isHoveringButton, setIsHoveringButton] = useState(false);
   useFontResize(outerDiv);
+  const age = Math.floor((Date.now() - new Date("2000-03-25")) / 31556926000);
 
   useEffect(() => {
     const setIsHoveringButtonEvent = () => {
@@ -26,9 +27,9 @@ const TextContainer = () => {
           Hi! I'm Luke. Nice to meet you! 👋
           <br />
           <br />
-          I'm a frontend developer based in Bratislava, Slovakia. I'm 23 years
-          old. I've always loved new technologies and discovering new ways to
-          create things! Hope you enjoy my portfolio! 😊
+          I'm a frontend developer based in Bratislava, Slovakia. I'm {age}{" "}
+          years old. I've always loved new technologies and discovering new ways
+          to create things! Hope you enjoy my portfolio! 😊
         </>,
       );
       setIsMaxWidth(true);
