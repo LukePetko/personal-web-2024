@@ -3,7 +3,7 @@ import PageLayout from "../layouts/PageLayout.astro";
 import { Image } from "astro:assets";
 import profile from "../assets/profile.jpg";
 
-const age = Math.floor((new Date() - new Date("2000-03-25")) / 31556926000);
+const age = Math.floor((Date.now() - +new Date("2000-03-25")) / 31556926000);
 ---
 
 <PageLayout title="About Me">
