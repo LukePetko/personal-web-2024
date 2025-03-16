@@ -14,7 +14,7 @@ const TextContainer = () => {
   const [isMaxWidth, setIsMaxWidth] = useState(false);
   const [isHoveringButton, setIsHoveringButton] = useState(false);
   useFontResize(outerDiv);
-  const age = Math.floor((Date.now() - new Date("2000-03-25")) / 31556926000);
+  const age = Math.floor((Date.now() - +new Date("2000-03-25")) / 31556926000);
 
   useEffect(() => {
     const setIsHoveringButtonEvent = () => {
