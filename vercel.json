@@ -1,0 +1,10 @@
+{
+  "redirects": [
+    {
+      "source": "/music",
+      "destination": "https://music.apple.com/sk/playlist/2506/pl.u-Ymb0962fa3E7dA?l=sk",
+      "permanent": false
+    }
+  ]
+}
+
